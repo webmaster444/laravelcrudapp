@@ -74,6 +74,9 @@ class CRUDController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $crud = Crud::find($id);
+      $crud->delete();
+
+      return redirect('/crud');
     }
 }
