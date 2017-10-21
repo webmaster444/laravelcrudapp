@@ -1,5 +1,5 @@
-# laravelcrudapp
-Laravel Crud App 
+# Laravel CRUD APP from Scratch
+Laravel CRUD App for beginners
 
 ## Steps to use Github code
 
