@@ -1,7 +1,7 @@
 # laravelcrudapp
 Laravel Crud App 
 
-##Steps to use Github code
+## Steps to use Github code
 
 - Clone the repo in your local.
 - Go to root of the project and run command “composer update“
