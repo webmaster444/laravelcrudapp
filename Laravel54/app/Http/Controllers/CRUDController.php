@@ -1,11 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Crud;
 use Illuminate\Http\Request;
 
 class CRUDController extends Controller
 {
+    public function index()
+    {
+        $cruds = Crud::all()->toArray();
+        
+        return view('crud.index', compact('cruds'));
+    }
     public function create()
     {
         return view('crud.create');
@@ -19,5 +25,55 @@ class CRUDController extends Controller
 
         $crud->save();
         return redirect('/crud');
+    }
+     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $crud = Crud::find($id);
+        
+        return view('crud.edit', compact('crud','id'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $crud = Crud::find($id);
+        $crud->title = $request->get('title');
+        $crud->post = $request->get('post');
+        $crud->save();
+        return redirect('/crud');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
