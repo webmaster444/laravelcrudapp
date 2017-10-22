@@ -1,4 +1,5 @@
 <!-- master.blade.php -->
+
 <!doctype html>
 <html lang="{{ config('app.locale') }}">
     <head>
