@@ -1,4 +1,5 @@
 <!-- index.blade.php -->
+
 @extends('master')
 @section('content')
   <div class="container">
@@ -25,6 +26,6 @@
       </tr>
       @endforeach
     </tbody>
-  </table>
+  </table>  
   </div>
 @endsection
