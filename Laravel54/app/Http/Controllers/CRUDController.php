@@ -66,6 +66,10 @@ class CRUDController extends Controller
         return redirect('/crud');
     }
 
+
+
+
+
     /**
      * Remove the specified resource from storage.
      *
